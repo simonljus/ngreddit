@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{entry.title}}</h1>
+<div mat-dialog-content>
+  <p>{{entry.selftext}}</p>
+  <app-media [imageSource]="entry.thumbnail !== 'self' ? entry.thumbnail : undefined " [videoSource]="entry.media?.reddit_video?.fallback_url"></app-media>
+</div>
+<div mat-dialog-actions>
+    <span><mat-icon>arrow_upward</mat-icon>{{entry.score}}</span>
+    <span><mat-icon>access_time</mat-icon>{{entry.created | dateRelative}}</span>
+    <span><mat-icon> message</mat-icon>{{entry.numComments}}</span>
+</div>

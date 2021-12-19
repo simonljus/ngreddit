@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{entry.title}}</mat-card-title>
+        <mat-card-subtitle>{{entry.author}}</mat-card-subtitle>
+    </mat-card-header>
+    <app-media [imageSource]="entry.thumbnail" [videoSource]="entry.media?.reddit_video?.fallback_url"></app-media>
+    <mat-card-footer>
+        <span><mat-icon>arrow_upward</mat-icon>{{entry.score}}</span>
+        <span><mat-icon>access_time</mat-icon>{{entry.created | dateRelative}}</span>
+        <span><mat-icon> message</mat-icon>{{entry.numComments}}</span>
+    </mat-card-footer>
+</mat-card>

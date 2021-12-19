@@ -1,0 +1,3 @@
+<app-card (click)="onPostClick(post)"*ngFor=" let post of posts"  [entry]="post">
+</app-card>
+<app-paginator [disabled]="!!loading" (page)="onPageChange($event)"></app-paginator>

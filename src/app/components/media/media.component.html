@@ -1,0 +1,9 @@
+
+<ng-container *ngIf="imageSource;let source">
+    <img *ngIf="height && width;else originalImage" [height]="height" [width]="width"  [src]="source"/>
+    <ng-template #originalImage>
+        <img [src]="source"/>
+    </ng-template>
+</ng-container>
+
+<app-video *ngIf="videoSource;let source" [width]="width" [source]="source"></app-video>
